@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="Test_firefox(failed)">
+    <parameter name="Browser" value="firefox"/>
+    <classes>
+      <class name="BDD_runner.E2E_Runner">
+        <methods>
+          <include name="after_the_test"/>
+          <include name="Execution_done"/>
+          <include name="runScenario" invocation-numbers="1 2 3"/>
+          <include name="tearDownClass"/>
+          <include name="beforeTest"/>
+          <include name="setUpClass"/>
+        </methods>
+      </class> <!-- BDD_runner.E2E_Runner -->
+    </classes>
+  </test> <!-- Test_firefox(failed) -->
+  <test thread-count="5" parallel="tests" name="Test_chrome(failed)">
+    <parameter name="Browser" value="chrome"/>
+    <classes>
+      <class name="BDD_runner.E2E_Runner">
+        <methods>
+          <include name="after_the_test"/>
+          <include name="Execution_done"/>
+          <include name="runScenario" invocation-numbers="0 1 2 3"/>
+          <include name="tearDownClass"/>
+          <include name="beforeTest"/>
+          <include name="setUpClass"/>
+        </methods>
+      </class> <!-- BDD_runner.E2E_Runner -->
+    </classes>
+  </test> <!-- Test_chrome(failed) -->
+</suite> <!-- Failed suite [Suite] -->
